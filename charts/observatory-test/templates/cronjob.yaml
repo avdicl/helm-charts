@@ -1,0 +1,27 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: observatory
+  namespace: default
+spec:
+  schedule: "*/10 * * * *"
+  successfulJobsHistoryLimit: 0
+  failedJobsHistoryLimit: 0
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          serviceAccountName: observatory
+          restartPolicy: OnFailure
+          containers:
+          - name: observatory-cronjob
+            image: verto.azurecr.io/observatory:master
+            imagePullPolicy: Always
+            env:
+              - name: CLUSTER 
+                value: {{ .Values.cluster.name }}
+              - name: ELASTIC_APIKEY
+                valueFrom:
+                  secretKeyRef:
+                    name: observatory-runtime-secrets
+                    key: elastic_apikey
