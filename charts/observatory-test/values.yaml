@@ -6,7 +6,7 @@ cluster:
   name: ""
 
 secrets:
-  elastic_apikey: "placeholder"
+  elasticApikey: ""
 
 replicaCount: 1
 
