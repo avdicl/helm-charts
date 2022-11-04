@@ -3,6 +3,16 @@ entries:
   observatory-test:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2022-11-04T03:28:43.089837894Z"
+    description: A Helm chart for Kubernetes
+    digest: 2c95420017e2ef25d8db44b048def455bdc76760108bf351bde7394d503f3d72
+    name: observatory-test
+    type: application
+    urls:
+    - https://github.com/avdicl/helm-charts/releases/download/observatory-test-0.1.6/observatory-test-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2022-11-04T03:09:20.40922378Z"
     description: A Helm chart for Kubernetes
     digest: 4c20be6b632e9132b30345440a3c1725a894a0a103a2bc48cc5b1681922cfe21
