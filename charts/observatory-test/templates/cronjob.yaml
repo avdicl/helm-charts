@@ -24,4 +24,4 @@ spec:
                 valueFrom:
                   secretKeyRef:
                     name: {{ .Release.Name }}-runtime-secrets
-                    key: elastic_apikey
+                    key: elasticApikey
