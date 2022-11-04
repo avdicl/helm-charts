@@ -19,7 +19,7 @@ spec:
             imagePullPolicy: Always
             env:
               - name: CLUSTER 
-                value: {{ .Values.cluster.name }}
+                value: verto-cluster
               - name: ELASTIC_APIKEY
                 valueFrom:
                   secretKeyRef:
