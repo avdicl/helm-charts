@@ -2,7 +2,7 @@ apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
   name: observatory
-  namespace: default
+  namespace: {{ .Release.Namespace }}
 spec:
   schedule: "*/10 * * * *"
   successfulJobsHistoryLimit: 0

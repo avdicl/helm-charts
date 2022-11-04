@@ -5,7 +5,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: observatory
-    namespace: default
+    namespace: {{ .Release.Namespace }}
 roleRef:
   kind: ClusterRole
   name: observatory-reader
