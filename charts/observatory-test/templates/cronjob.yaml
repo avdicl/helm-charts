@@ -1,7 +1,7 @@
 apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
-  name: observatory
+  name: {{ .Release.Name }}
   namespace: {{ .Release.Namespace }}
 spec:
   schedule: "*/10 * * * *"
@@ -11,10 +11,10 @@ spec:
     spec:
       template:
         spec:
-          serviceAccountName: observatory
+          serviceAccountName: {{ .Release.Name }}
           restartPolicy: OnFailure
           containers:
-          - name: observatory-cronjob
+          - name: {{ .Release.Name }}-cronjob
             image: verto.azurecr.io/observatory:master
             imagePullPolicy: Always
             env:
@@ -23,5 +23,5 @@ spec:
               - name: ELASTIC_APIKEY
                 valueFrom:
                   secretKeyRef:
-                    name: observatory-runtime-secrets
+                    name: {{ .Release.Name }}-runtime-secrets
                     key: elastic_apikey
