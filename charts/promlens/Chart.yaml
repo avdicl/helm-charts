@@ -1,0 +1,6 @@
+apiVersion: v2
+name: promlens
+description: PromLens is a tool that makes learning and using PromQL easier and more productive
+type: application
+version: 1.0.1
+appVersion: "v0.3.0"
