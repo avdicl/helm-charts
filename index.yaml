@@ -181,4 +181,15 @@ entries:
     urls:
     - https://github.com/avdicl/helm-charts/releases/download/observatory-test-0.1.0/observatory-test-0.1.0.tgz
     version: 0.1.0
+  promlens:
+  - apiVersion: v2
+    appVersion: v0.3.0
+    created: "2022-12-30T01:23:33.052148128Z"
+    description: PromLens is a tool that makes learning and using PromQL easier and more productive
+    digest: 1aacbcb1264320a322df049cfc0a0572b1377f3c0d4902cd3733bde937c4afb8
+    name: promlens
+    type: application
+    urls:
+    - https://github.com/avdicl/helm-charts/releases/download/promlens-1.0.1/promlens-1.0.1.tgz
+    version: 1.0.1
 generated: "2022-11-04T02:08:37.351926836Z"
